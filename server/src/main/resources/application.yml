@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/milkboy?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: root
+    password: tldgk#12
+  jpa:
+    #    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+logging:
+  level:
+    org.springframework.boot.autoconfigure: ERROR
+#    org.hibernate.type.descriptor.sql.BasicBinder: trace
