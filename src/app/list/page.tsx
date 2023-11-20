@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import Home from "@/components/Home";
 
 const list = () => {
-  return <div>list</div>;
+  return <Home />;
 };
 
 export default list;

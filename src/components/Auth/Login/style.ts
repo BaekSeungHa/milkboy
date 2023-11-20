@@ -1,7 +1,6 @@
-import Link from "next/link";
 import { styled } from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.form`
   width: 100%;
   height: 100vh;
   padding-top: 30%;
@@ -56,4 +55,14 @@ export const PathToSignup = styled.p`
   margin-left: 163px;
 
   margin-top: 5px;
+`;
+
+export const SubmitButton = styled.button`
+  width: 300px;
+  height: 50px;
+
+  margin-top: 10px;
+
+  background-color: blue;
+  color: white;
 `;

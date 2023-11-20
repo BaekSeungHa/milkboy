@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Hydrate,
   QueryClient,
@@ -8,21 +10,19 @@ import { ReactNode } from "react";
 
 export interface ProvidersProps {
   children: ReactNode;
-  pageProps: any;
 }
 
-const Provider = ({ children, pageProps }: ProvidersProps) => {
-  const [queryClient] = useState(() => new QueryClient({
-    defaultOptions: {
-        queries: {
-            
-        }
-    }
-  }));
+const Provider = ({ children }: ProvidersProps) => {
+  const [queryClient] = useState(
+    () =>
+      new QueryClient({
+        defaultOptions: {
+          queries: {},
+        },
+      })
+  );
   return (
-    <QueryClientProvider client={queryClient}>
-      <Hydrate state={pageProps.dehydratedState}></Hydrate>
-    </QueryClientProvider>
+    <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
   );
 };
 

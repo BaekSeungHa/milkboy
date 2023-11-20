@@ -10,7 +10,7 @@ class MilkRepositoryImpl implements MilkRepository {
   }
 
   public async getDrankList(date: string): Promise<DrankMilkListResponse> {
-    const { data } = await milk.get(`/milk/user/${date}`);
+    const { data } = await milk.get(`/milk/users?date=${date}`);
     return data;
   }
 }

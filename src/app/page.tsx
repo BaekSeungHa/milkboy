@@ -1,5 +1,8 @@
-import Home from "@/components/Home";
+import Login from "@/components/Auth/Login";
+import React from "react";
 
-export default function HomePage() {
-  return <Home />;
-}
+const LoginPage = () => {
+  return <Login />;
+};
+
+export default LoginPage;

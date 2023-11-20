@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import Provider from "@/components/Provider";
 import StyledComponentsRegistry from "@/libs/styles/registry";
 import GlobalStyles from "@/styles/globalStyles";
 import type { Metadata } from "next";
@@ -18,8 +19,10 @@ export default function RootLayout({ children }: Props) {
     <html lang="ko">
       <body>
         <StyledComponentsRegistry>
-          <GlobalStyles />
-          <Layout>{children}</Layout>
+          <Provider>
+            <GlobalStyles />
+            <Layout>{children}</Layout>
+          </Provider>
         </StyledComponentsRegistry>
       </body>
     </html>
