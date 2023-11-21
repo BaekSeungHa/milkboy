@@ -1,5 +1,3 @@
-"use client";
-
 import Home from "@/components/Home";
 
 const list = () => {

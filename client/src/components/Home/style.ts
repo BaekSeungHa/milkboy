@@ -15,24 +15,27 @@ export const Title = styled.h1`
   font-size: 20px;
 `;
 
-export const TH = styled.div`
-  display: flex;
-  justify-content: space-around;
-
+export const Table = styled.table`
   width: 80%;
-
   margin-top: 30px;
-
-  font-size: 18px;
-  border-bottom: 1px solid gray;
+  border-collapse: collapse;
 `;
 
-export const TD = styled.div`
-  width: 80%;
+export const TH = styled.th`
+  font-size: 18px;
+  border: 1px solid gray;
+  padding: 8px;
+`;
 
+export const TD = styled.td`
+  text-align: center;
+  border: 1px solid gray;
+  padding: 8px;
+`;
+
+// Additional styling for CheckBox if needed
+export const CheckBoxWrapper = styled.div`
   display: flex;
-
-  justify-content: space-around;
-
-  border-bottom: 1px solid gray;
+  align-items: center;
+  justify-content: center;
 `;

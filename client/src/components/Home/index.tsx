@@ -52,18 +52,29 @@ const Home = () => {
   return (
     <S.Container>
       <S.Title>2학년 1반의 {formattedDate} 우유 확인</S.Title>
-      <S.TH>
-        <div>이름</div> <div>마신 여부</div>
-      </S.TH>
-      {data?.data.map((data) => (
-        <S.TD key={data.user.id}>
-          <div>{data.user.name}</div>
-          <CheckBox
-            onChange={() => onChangeDrank(data.user.id)}
-            checked={data.drinks === true ? true : false}
-          />
-        </S.TD>
-      ))}
+      <S.Table>
+        <thead>
+          <tr>
+            <S.TH>이름</S.TH>
+            <S.TH>마신 여부</S.TH>
+          </tr>
+        </thead>
+        <tbody>
+          {data?.data.map((data) => (
+            <tr key={data.user.id}>
+              <S.TD>{data.user.name}</S.TD>
+              <S.TD>
+                <S.CheckBoxWrapper>
+                  <CheckBox
+                    onChange={() => onChangeDrank(data.user.id)}
+                    checked={data.drinks === true ? true : false}
+                  />
+                </S.CheckBoxWrapper>
+              </S.TD>
+            </tr>
+          ))}
+        </tbody>
+      </S.Table>
     </S.Container>
   );
 };
